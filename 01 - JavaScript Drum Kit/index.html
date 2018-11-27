@@ -61,9 +61,11 @@
   window.addEventListener("keydown", function(e) {
     var selKey = e.keyCode;
     const audio = document.querySelector(`audio[data-key="${selKey}"]`);
+    const keyEle = document.querySelector(`div[data-key="${selKey}"]`);
     if (!audio) return; // Return if there is no audio file for the selected key
     audio.currentTime = 0; // Rewind to start so that audio will play even if we press key multiple times
     audio.play();
+    keyEle.classList.add('playing');
   });
 </script>
 
