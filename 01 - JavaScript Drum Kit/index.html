@@ -67,6 +67,12 @@
     audio.play();
     keyEle.classList.add('playing');
   });
+
+  const keys = document.querySelectorAll(`.key`);
+  keys.forEach(key => key.addEventListener('transitionend', function (e) {
+    if(e.propertyName !== 'transform') return; // Return if its not a transition property
+    this.classList.remove('playing');
+  }));
 </script>
 
 
