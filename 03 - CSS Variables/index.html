@@ -61,6 +61,15 @@
   </style>
 
   <script>
+    const inpCtrls = document.querySelectorAll('.controls input');
+
+    function handleChg() {
+      const suffix = this.dataset.sizing || '';
+      document.documentElement.style.setProperty(`--${this.id}`, this.value + suffix);
+    }
+
+    inpCtrls.forEach(inp => inp.addEventListener('change', handleChg));
+    inpCtrls.forEach(inp => inp.addEventListener('mousemove', handleChg));
   </script>
 
 </body>
