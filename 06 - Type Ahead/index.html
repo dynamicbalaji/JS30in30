@@ -28,6 +28,13 @@ fetch(endpoint).then(blob => blob.json())
   console.log(error);
 });
 
+function findMatches(searchedWord, cities) {
+  return cities.filter(place => {
+    const regEx = new RegExp(searchedWord, 'gi');
+    return place.city.match(regEx) || place.state.match(regEx)
+  });
+}
+
 </script>
   </body>
 </html>
