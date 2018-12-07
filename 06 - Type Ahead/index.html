@@ -36,7 +36,9 @@ function findMatches(searchedWord, cities) {
 }
 
 function displayMatches() {
-  console.log(this.value);
+  const matchArr = findMatches(this.value, cities);
+  console.log('matchArr: ', matchArr);
+
 }
 
 const search = document.querySelector('.search');
