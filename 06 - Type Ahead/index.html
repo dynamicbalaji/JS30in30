@@ -35,6 +35,15 @@ function findMatches(searchedWord, cities) {
   });
 }
 
+function displayMatches() {
+  console.log(this.value);
+}
+
+const search = document.querySelector('.search');
+const suggestions = document.querySelector('.suggestions');
+
+search.addEventListener('change', displayMatches);
+search.addEventListener('keyup', displayMatches);
 </script>
   </body>
 </html>
