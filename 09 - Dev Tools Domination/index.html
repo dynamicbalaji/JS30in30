@@ -48,6 +48,14 @@
     console.dir(p); // Will display all methods/variables available for that element
 
     // Grouping together
+    dogs.forEach(dog => {
+      // console.group(`${dog.name}`); // All content of the group is expanded
+      console.groupCollapsed(`${dog.name}`); // All content of the group is collapsed
+      console.log(`This is ${dog.name}`);
+      console.log(`${dog.name} is ${dog.age} years old`);
+      console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+      console.groupEnd(`${dog.name}`);
+    });
 
     // counting
 
