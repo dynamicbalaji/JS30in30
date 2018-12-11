@@ -72,6 +72,13 @@
     console.count('Muruga');
 
     // timing
+    console.time('fetching data');
+    fetch('https://api.github.com/users/dynamicbalaji')
+        .then(data => data.json())
+        .then(data => {
+          console.log(data);
+          console.timeEnd('fetching data');
+        });
 
   </script>
 </body>
