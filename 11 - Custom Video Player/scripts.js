@@ -40,3 +40,4 @@ video.addEventListener('play', updateButton);
 toggle.addEventListener('click', togglePlay);
 skipButtons.forEach(button => button.addEventListener('click', skip));
 ranges.forEach(range => range.addEventListener('click', handleRangeChange));
+ranges.forEach(range => range.addEventListener('change', handleRangeChange));
