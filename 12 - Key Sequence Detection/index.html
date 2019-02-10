@@ -7,8 +7,12 @@
 </head>
 <body>
 <script>
+  let pressedKeys = [];
+  const secretWord = "dynamicbalaji";
   window.addEventListener('keydown', (e) => {
     console.log(e.key);
+    pressedKeys.push(e.key);
+    console.log('pressedKeys: ', pressedKeys);
   });
 </script>
 </body>
