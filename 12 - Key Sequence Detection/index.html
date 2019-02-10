@@ -13,6 +13,12 @@
     console.log(e.key);
     pressedKeys.push(e.key);
     console.log('pressedKeys: ', pressedKeys);
+    //Getting only the last 13 pressed keys as our secretword's length is 13
+    pressedKeys.splice(-secretWord.length - 1, pressedKeys.length - secretWord.length);
+    console.log('pressedKeys: ', pressedKeys);
+    if(pressedKeys.join('') === secretWord){
+      console.log("Om Muruga");
+    }
   });
 </script>
 </body>
